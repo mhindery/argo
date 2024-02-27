@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     path: apps/poc
-    repoURL: "git@github.com:mhindery/argo.git"
+    repoURL: "https://github.com/mhindery/argo.git"
     targetRevision: HEAD
   syncPolicy:
     automated:
