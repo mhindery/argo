@@ -1,7 +1,8 @@
+# Single config for the POC app, describe which version to run
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: poc
+  name: poc-app
   namespace: poc
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -11,7 +12,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: poc
+    path: poc/v1
     repoURL: "git@github.com:mhindery/argo.git"
     targetRevision: HEAD
   syncPolicy:
