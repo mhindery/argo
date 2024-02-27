@@ -13,7 +13,7 @@ spec:
   project: default
   source:
     path: poc/v1
-    repoURL: "git@github.com:mhindery/argo.git"
+    repoURL: "https://github.com/mhindery/argo.git"
     targetRevision: HEAD
   syncPolicy:
     automated:
