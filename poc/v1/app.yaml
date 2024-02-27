@@ -6,6 +6,7 @@ metadata:
 spec:
   project: default
   source:
+    # Reference external helm chart here, with values taken from local file
     chart: cp-microservice
     repoURL: https://github.com/mhindery/charts/
     targetRevision: 0.0.2
