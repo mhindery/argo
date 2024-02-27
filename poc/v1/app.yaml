@@ -8,7 +8,7 @@ spec:
   source:
     # Reference external helm chart here, with values taken from local file
     chart: cp-microservice
-    repoURL: https://github.com/mhindery/charts/
+    repoURL: https://mhindery.github.io/charts/
     targetRevision: 0.0.2
     helm:
       valueFiles:
