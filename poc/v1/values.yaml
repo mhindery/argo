@@ -1,0 +1,7 @@
+replicaCount: 1
+
+image:
+  repository: mhindery/balfolk.music
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "sha-9b80f9d"

@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: poc
+  namespace: poc
+spec:
+  project: default
+  source:
+    chart: cp-microservice
+    repoURL: https://github.com/mhindery/charts/
+    targetRevision: 0.0.2
+    helm:
+      valueFiles:
+      - values.yaml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: kubeseal
