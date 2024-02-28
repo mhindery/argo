@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: poc-webapp1
+  name: helloworld-demo-python
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -12,7 +12,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: webapp1/0.0.11
+    path: helloworld-demo-python /0.0.1
     repoURL: "https://github.com/mhindery/argo.git"
     targetRevision: HEAD
   syncPolicy:

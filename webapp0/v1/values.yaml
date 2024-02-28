@@ -1,5 +1,0 @@
-replicaCount: 1
-
-image:
-  repository: mhindery/balfolk.music
-  tag: "sha-9b80f9d"
