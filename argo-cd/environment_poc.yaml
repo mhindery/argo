@@ -1,8 +1,8 @@
-# App of apps root
+# App of apps root per environment
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: all-my-apps
+  name: environment-poc
   namespace: argocd
 spec:
   destination:
@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: apps/poc
+    path: environments/poc
     repoURL: "https://github.com/mhindery/argo.git"
     targetRevision: HEAD
   syncPolicy:
