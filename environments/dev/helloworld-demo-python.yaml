@@ -1,0 +1,29 @@
+# Single config for the POC app, describe which version to run
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helloworld-demo-python
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: dev
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: helloworld-demo-python/0.0.4
+    repoURL: "https://github.com/mhindery/argo.git"
+    targetRevision: HEAD
+  syncPolicy:
+    # automated:
+    #   prune: true
+    #   selfHeal: true
+    retry:
+      limit: 5
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
+    syncOptions:
+      - CreateNamespace=true
